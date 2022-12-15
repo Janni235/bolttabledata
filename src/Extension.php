@@ -7,7 +7,6 @@ namespace Bolt\Extension\Janni235\BoltTableData;
 use Bolt\Field\Base\FieldTypeBase;
 use Bolt\Field\Option\FieldOption as Option;
 use Bolt\Extension\BaseExtension;
-use Bolt\Field\FieldTypeBase;
 use Bolt\Translation\Translator as Trans;
 
 class Extension extends BaseExtension
