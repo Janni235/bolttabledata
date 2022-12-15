@@ -15,7 +15,7 @@
     },
     "require-dev": {
         "bolt/core": "^4.1",
-        "symplify/easy-coding-standard": "^8.3"
+        "symplify/easy-coding-standard": "^10.2"
     },
     "autoload": {
         "psr-4": {
