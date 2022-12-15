@@ -11,7 +11,8 @@
     ],
     "require": {
         "php": ">=7.2.9",
-        "twig/twig": "^2.12 | ^3.0"
+        "twig/twig": "^2.12 | ^3.0",
+        "janni235/bolttabledata": "1.0.*"
     },
     "require-dev": {
         "bolt/core": "^4.1",
