@@ -1,0 +1,9 @@
+<tbody>
+	{% for row in data.tabledata %}
+		<tr>
+			<th scope="row" class="rowHeader">{{ row.row }}</th>
+			<td>{{ row.column1 }}</td>
+			<td>{{ row.column2 }}</td>
+		</tr>
+	{% endfor %}
+</tbody>
