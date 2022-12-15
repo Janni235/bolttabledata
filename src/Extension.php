@@ -6,9 +6,7 @@ namespace Bolt\Extension\Janni235\BoltTableData;
 
 use Bolt\Extension\BaseExtension;
 use Bolt\Entity\Field;
-use Bolt\Entity\Field\FieldInterface;
-use Bolt\Entity\Field\Type\FieldTypeBase;
-use Bolt\Entity\Field\Option\Option;
+use Bolt\Entity\FieldInterface;
 use Bolt\Translation\Translator as Trans;
 
 class Extension extends BaseExtension
@@ -38,7 +36,7 @@ class Extension extends BaseExtension
     }
 }
 
-class TableDataType extends FieldTypeBase implements FieldInterface
+class TableDataType extends Field
 {
     public function getName()
     {
