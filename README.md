@@ -7,7 +7,7 @@ This Bolt extension can be used as to add tr, th, td to table body.
 Installation:
 
 ```bash
-composer require janni235/bolttabledata
+composer require Janni235/bolttabledata
 ```
 
 
