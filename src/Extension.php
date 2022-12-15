@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Bolt\Extension\Janni235\BoltTableData;
 
 use Bolt\Extension\BaseExtension;
-use Bolt\Field\FieldInterface;
-use Bolt\Field\FieldTypeBase;
-use Bolt\Field\FieldOption as Option;
+use Bolt\Entity\Field;
+use Bolt\Entity\Field\FieldInterface;
+use Bolt\Entity\Field\Type\FieldTypeBase;
+use Bolt\Entity\Field\Option\Option;
 use Bolt\Translation\Translator as Trans;
 
 class Extension extends BaseExtension
