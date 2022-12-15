@@ -36,7 +36,7 @@ class Extension extends BaseExtension
     }
 }
 
-class TableDataType extends Field
+class TableDataType extends Field implements FieldInterface
 {
     public function getName()
     {
