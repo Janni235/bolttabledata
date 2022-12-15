@@ -36,24 +36,24 @@ class Extension extends BaseExtension
     }
 }
 
-class TableDataType extends Field implements FieldInterface
+class TableDataType extends Field
 {
-    public function getName()
+    public function getName(): string
     {
         return 'tabledata';
     }
 
-    public function getTemplate()
+    public function getTemplate(): string
     {
         return 'tabledata.twig';
     }
 
-    public function getStorageType()
+    public function getStorageType(): string
     {
         return 'text';
     }
 
-    public function getStorageOptions()
+    public function getStorageOptions(): array
     {
         return [
             'default' => null,
@@ -61,17 +61,17 @@ class TableDataType extends Field implements FieldInterface
         ];
     }
 
-    public function getStorageColumnType()
+    public function getStorageColumnType(): string
     {
         return 'text';
     }
 
-    public function getFormType()
+    public function getFormType(): string
     {
         return 'tabledata';
     }
 
-    public function getFormOptions()
+    public function getFormOptions(): array
     {
         return [
             'label' => 'Table data',
@@ -84,7 +84,7 @@ class TableDataType extends Field implements FieldInterface
         ];
     }
 
-    public function getValidationOptions()
+    public function getValidationOptions(): array
     {
         return [
             'required' => false,
@@ -94,12 +94,12 @@ class TableDataType extends Field implements FieldInterface
         ];
     }
 
-    public function getDefaultValue()
+    public function getDefaultValue(): array
     {
         return null;
     }
 
-    public function getTemplateOptions()
+    public function getTemplateOptions(): array
     {
         return [
             'tabledata' => [
@@ -109,7 +109,7 @@ class TableDataType extends Field implements FieldInterface
         ];
     }
 
-    public function getConfiguration()
+    public function getConfiguration(): array
     {
         return [
             'type' => $this->getName(),
