@@ -4,10 +4,38 @@ declare(strict_types=1);
 
 namespace Bolt\Extension\Janni235\BoltTableData;
 
+use Bolt\BaseExtension;
 use Bolt\Field\FieldInterface;
 use Bolt\Field\FieldTypeBase;
 use Bolt\Field\FieldOption as Option;
 use Bolt\Translation\Translator as Trans;
+
+class Extension extends SimpleExtension
+{
+    public function getName()
+    {
+        return 'BoltTableData';
+    }
+
+    public function getVersion()
+    {
+        return '1.0';
+    }
+
+    public function getDependencies()
+    {
+        return [
+            FieldTypeBase::class,
+        ];
+    }
+
+    public function registerFields()
+    {
+        return [
+            new TableDataType(),
+        ];
+    }
+}
 
 class TableDataType extends FieldTypeBase implements FieldInterface
 {
@@ -104,4 +132,3 @@ class TableDataType extends FieldTypeBase implements FieldInterface
         ];
     }
 }
-
