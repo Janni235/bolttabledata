@@ -1,5 +1,5 @@
 {
-    "name": "Janni235/bolttabledata",
+    "name": "janni235/bolttabledata",
     "description": "📦 This Bolt extension can be used to add tr, td, th to a table body.",
     "type": "bolt-extension",
     "license": "MIT",
