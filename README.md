@@ -1,13 +1,13 @@
-# Acme ReferenceExtension
+# BoltTableData
 
-Author: YourNameHere
+Author: Janni235
 
-This Bolt extension can be used as a starting point to base your own extensions on.
+This Bolt extension can be used as to add tr, th, td to table body.
 
 Installation:
 
 ```bash
-composer require acmecorp/reference-extension
+composer require janni235/bolttabledata
 ```
 
 
