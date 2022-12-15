@@ -12,24 +12,24 @@ use Bolt\Translation\Translator as Trans;
 
 class Extension extends BaseExtension
 {
-    public function getName()
+    public function getName(): string
     {
         return 'BoltTableData';
     }
 
-    public function getVersion()
+    public function getVersion(): string
     {
         return '1.0';
     }
 
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [
             FieldTypeBase::class,
         ];
     }
 
-    public function registerFields()
+    public function registerFields(): iterable
     {
         return [
             new TableDataType(),
