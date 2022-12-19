@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bolt\Extension\Janni235\BoltTableData;
+namespace Janni235\BoltTableData;
 
 use Bolt\Extension\BaseExtension;
 use Bolt\Entity\Field;
