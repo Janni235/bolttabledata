@@ -8,6 +8,9 @@ use Bolt\Extension\BaseExtension;
 use Bolt\Entity\Field;
 use Bolt\Entity\FieldInterface;
 use Bolt\Translation\Translator as Trans;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class Extension extends BaseExtension
 {
@@ -68,7 +71,7 @@ class TableDataType extends Field
 
     public function getFormType(): string
     {
-        return 'tabledata';
+        return 'collection';
     }
 
     public function getFormOptions(): array
@@ -77,10 +80,12 @@ class TableDataType extends Field
             'label' => 'Table data',
             'default' => null,
             'required' => false,
-            'choices' => [
-                'row' => 'Row',
-                'column' => 'Column'
-            ],
+            'entry_type' => TableRowType::class,
+            'allow_add' => true,
+            'allow_delete' => true,
+            'prototype' => true,
+            'prototype_name' => '__name__',
+            'by_reference' => false,
         ];
     }
 
@@ -129,5 +134,30 @@ class TableDataType extends Field
                 'options' => $this->getValidationOptions()
             ]
         ];
+    }
+}
+
+class TableRowType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('row', TextType::class, [
+                'label' => 'Row header',
+            ])
+            ->add('column1', TextType::class, [
+                'label' => 'Column 1',
+            ])
+            ->add('column2', TextType::class, [
+                'label' => 'Column 2',
+            ])
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => null,
+        ]);
     }
 }
